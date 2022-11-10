@@ -1,3 +1,4 @@
+import javax.print.DocFlavor;
 import java.util.Scanner;
 
 public class ExH {
@@ -38,12 +39,7 @@ public class ExH {
         return new_num;
     }
 
-
-    public static void main(String[] args) {
-        int N = scanner.nextInt();
-        int[] num = lerArray(N);
-        int[] new_array = new int[N];
-        String op = scanner.nextLine();
+    public static String display(String op, int[] num, int[] new_array, int N){
         for (int i = 0; i < N; i++) {
             new_array[i] = num[i];
         }
@@ -64,5 +60,15 @@ public class ExH {
 
             op = scanner.nextLine();
         }
+        return op;
+    }
+
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        int[] num = lerArray(N);
+        int[] new_array = new int[N];
+        String op = scanner.nextLine();
+        display(op, num, new_array, N);
+
     }
 }
