@@ -39,13 +39,16 @@ public class ExB {
 
         return ocu;
     }
-
-    public static void main(String[] args) {
-        int[] numbers = lerArray();
-        int min = verMin(numbers);
+    public static void display(int min, int[] numbers){
         if (min > 0) {
             System.out.println("min=" + min);
             System.out.println("occurrences=" + vezesMin(numbers, min));
         }
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = lerArray();
+        int min = verMin(numbers);
+        display(min, numbers);
     }
 }

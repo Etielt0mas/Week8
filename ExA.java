@@ -31,12 +31,16 @@ public class ExA {
 
     }
 
+    public static void display(int N, double[] notas){
+        System.out.printf("average=%.1f%n", mediaCalculator(N, notas));
+        System.out.println("failures="+contarNeg(N, notas));
+    }
+
     public static void main(String[] args) {
         // Pergunta o número de alunos
         int N = scanner.nextInt();
         double[] notas = lerNotas(N);
-        System.out.printf("average=%.1f%n", mediaCalculator(N, notas));
-        System.out.println("failures="+contarNeg(N, notas));
+        display(N, notas);
     }
 
 }

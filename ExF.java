@@ -26,10 +26,14 @@ public class ExF {
 
         return valorfinal;
     }
+    public static void display(double valorInicial, double[] juros){
+        System.out.printf("final value=%.2f%n",valorFinal(valorInicial, juros));
+    }
+
     public static void main(String[] args) {
         double[] juros = lerJuros();
         double valorInicial = valorInicial();
-        System.out.printf("final value=%.2f%n",valorFinal(valorInicial, juros));
+        display(valorInicial, juros);
 
     }
 }
